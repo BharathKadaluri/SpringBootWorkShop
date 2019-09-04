@@ -3,10 +3,14 @@ package com.zorder.orderservice.dto;
 
 import org.springframework.stereotype.Component;
 
-@Component
+import javax.validation.constraints.NotEmpty;
+
+
 public class ProductDetails {
 
+    @NotEmpty
     private String name;
+    @NotEmpty
     private String description;
 
     public String getName() {
