@@ -1,0 +1,9 @@
+package com.zorder.orderservice.repo;
+
+import com.zorder.orderservice.entities.ProductModel;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ProductRepo extends JpaRepository<ProductModel,Integer> {
+}
