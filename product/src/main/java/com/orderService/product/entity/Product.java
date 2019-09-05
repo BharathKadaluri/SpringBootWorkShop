@@ -20,6 +20,11 @@ public class Product {
     @Column(name = "description")
     private String description;
 
+    public Product(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
     public String getName() {
         return name;
     }

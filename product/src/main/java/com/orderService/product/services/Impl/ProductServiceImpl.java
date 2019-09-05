@@ -13,10 +13,12 @@ public class ProductServiceImpl implements iProductService {
     @Autowired
     ProductRepository productRepo;
 
-    public Product getProductOrder(Product product) {
+    public Product getProductOrder(String name, String description) {
 
+        Product product = new Product(name, description);
         productRepo.save(product);
-        Product fetchedOrderProduct = productRepo.findByName(product.getName());
+
+        Product fetchedOrderProduct = productRepo.findByName(name);
         return fetchedOrderProduct;
     }
 }
